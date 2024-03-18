@@ -12,6 +12,13 @@ Description: This program implements a graph class with at least:
 
 Design: 
 
+The first step of designing this program is to understand what is a graph. In computer science a graph is an abstract data type and, according to Layman's definition, a graph is a network that defines the relationship between components in our system. See below:
+
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/2bce32be-74fc-4d6e-acad-01996b893042)
+
+
+
+
 ---------------------------------------------------------------------------------------------------
 
 Tests: (at least 2 per function)
