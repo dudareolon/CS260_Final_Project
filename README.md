@@ -16,6 +16,10 @@ The first step of designing this program is to understand what is a graph. In co
 
 ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/2bce32be-74fc-4d6e-acad-01996b893042)
 
+The circles are refered to vertix(singular)/vertices(plural) or nodes and they are the components that form the graph.
+
+The arrows define the relationship betweent the components and are referred to as edges.
+
 
 
 
