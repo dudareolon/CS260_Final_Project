@@ -33,6 +33,15 @@ public:
     // This function adds a vertex to the graph, but does not connect it yet
     void addVertex(string name) {
         
+        // check if the vertex is already a part of the graph
+        // initializes a loop variable iteration of type Vertex, which will iterate over each element in the vertices vector
+        for (const Vertex& iteration : vertices) {
+            if (iteration.name == name) { // if iteration name is equal to name trying to be input, then display error message
+            cout << "Vertex " << name << " is already in the graph" << endl; // error message
+            return; // exits the function without adding the newVertex
+    }
+}
+
         // Create a new Vertex object
         Vertex newVertex;
         newVertex.name = name;
@@ -62,6 +71,7 @@ int main() {
     Graph graph;
 
     // Add vertices
+    graph.addVertex("A");
     graph.addVertex("A");
     graph.addVertex("B");
     graph.addVertex("C");
