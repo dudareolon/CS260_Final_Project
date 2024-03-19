@@ -91,3 +91,11 @@ Complexity Analyzis:
 ---------------------------------------------------------------------------------------------------
 
 The parts of the code where I meet each one of the requirements are the following:
+
+- a function to add a new vertex to the graph:
+
+- a function to add a new edge between two vertices of the graph:
+  
+- a function for a shortest path algorithm:
+  
+- a function for a minimum spanning tree algorithm:
