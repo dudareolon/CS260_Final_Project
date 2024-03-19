@@ -72,8 +72,7 @@ for add_vertex
 
 for add_edge
 - Try to add several edges
-- Try to use a source node that is not in the graph
-- Try to use a destination node that is not in the graph
+- repeat adding the same edge
 
 for shortest_path
 - Check if it successfuly finds the shortest path between two vertices
