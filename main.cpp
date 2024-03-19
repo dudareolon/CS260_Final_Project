@@ -133,8 +133,8 @@ public:
                 // iterated through all neighbors in the neighbor list of the current level we are looking at
                 for (auto& neighbor : neighbors_list[current_level]) {
 
-                    // neighbors_list elements have two information, the name of the neighbor and the weight on the edge between the neighbor and the source
-                    // by saying neighbor.first we want to extract the name of the current neighbor element we are looking at, if it was .second we would take the weight of it
+                    // neighbors_list elements have 3 information, the name of the source, the name of the neighbor and the weight on the edge between the neighbor and the source
+                    // by saying neighbor.first we want to extract the name of the current vertex we are looking at
                     const string& neighbor_name = neighbor.first; // Extract neighbor vertex name
 
                     // check if the neighbor vertex was already visited 
@@ -211,13 +211,28 @@ public:
 
         // In Kruskal's algorithm, we need to keep track of the parent of each vertex. Initially, each vertex is considered as its own parent.
         for (auto& vertex_pair : neighbors_list) { // for each vertex pair in the neighbor_list unsorted map
-            const string& vertex = vertex_pair.first; // .first extracts the name of the neighbor vertex
+            const string& vertex = vertex_pair.first; // .first extracts the name of the source vertex
             parent[vertex] = vertex; //set it as its own parent
         }
 
 
         //  1- Sort all the edges in non-decreasing order of their weight. 
+        
+        //declare a vector to store edges with integer weights and pairs of strings representing source and destination vertices.
+        vector<pair<int, pair<string, string>>> edges;
 
+        for (auto& vertex_pair : neighbors_list) { // for each vertex pair in the neighbor_list unsorted map
+
+            const string& source = vertex_pair.first; // each iteration the source will be updated to being the source of the following neighbor_list element
+
+            for (auto& neighbor : vertex_pair.second) { // iterate through each neighbor in the neighbor list 
+                const string& destination = neighbor.first;  // get their destination
+                int weight = neighbor.second; // and their weight
+                edges.push_back({weight, {source, destination}}); // add this new structure to the end of edges vector
+            }
+        }
+
+        sort(edges.begin(), edges.end()); // sort the edges vector in ascending order based on the weight of the edges.
 
 
         // 2- Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If the cycle is not formed, include this edge. Else, discard it. 
