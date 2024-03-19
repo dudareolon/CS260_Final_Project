@@ -9,10 +9,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
+#include <utility>
 
 // unordered_map stores a hash table-based associative container that stores elements formed by the combination of a key and a mapped value
 // I will use the features of this file to store the weight in between two vertices
 #include <unordered_map>
+
 
 // shortcuts
 using std::cout;
@@ -20,6 +23,8 @@ using std::endl;
 using std::string;
 using std::vector;
 using std::unordered_map;
+using std::pair;
+
 
 // Struct to represent each vertex/node in the graph
 struct Vertex {
@@ -180,6 +185,27 @@ public:
         return reversed_path;
     }
 
+    string find_parent(unordered_map<string, string>& parent, const string& vertex) {
+        if (parent[vertex] != vertex) {
+            parent[vertex] = find_parent(parent, parent[vertex]);
+        }
+        return parent[vertex];
+    }
+
+    // This function attempts to apply the Kruskal's algorithm to find the minimum spanning tree
+    // it takes no input but it will output a vector that each element is a pair of two strings
+    // these two strings will represent a pair of connected vertices that are still present in the MST 
+    vector<pair<string, string>> kruskal_min_span_tree() {
+
+        // Initialize minimum spanning tree edges
+        vector<pair<string, string>> min_span_tree_edges;
+
+
+        // returns the result
+        return min_span_tree_edges;
+    }
+
+
 };
 
 int main() {
@@ -215,6 +241,13 @@ int main() {
     // test to add an edge for a vertex that does not exist
     // graph.addEdge(graph.vertices[1], graph.vertices[22], 3); // it gives bad_alloc error 
 
+    // Finding minimum spanning tree using Kruskal's algorithm
+    cout << "Minimum Spanning Tree: ";
+    vector<pair<string, string>> min_span_tree = graph.kruskal_min_span_tree();
+    for (const auto& edge : min_span_tree) {
+        cout << "(" << edge.first << ", " << edge.second << ") ";
+    }
+    cout << endl;
 
     return 0;
 }
