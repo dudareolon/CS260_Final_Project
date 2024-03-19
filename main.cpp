@@ -43,6 +43,18 @@ public:
         vertices.insert(vertices.end(), newVertex);
     }
 
+    // Function to add a new weighted edge between two vertices of the graph
+    void addEdge(Vertex source, Vertex destination, int weight){ //it takes in two vertices and the integer weight 
+
+        // Create a new edge object
+        Edge newEdge;
+        newEdge.weight = weight;
+        newEdge.destination = &destination; // & takes the address of the variable after it
+        newEdge.source = &source; // assign the address to the destination and source pointers
+
+
+    }
+
 
 
 };
