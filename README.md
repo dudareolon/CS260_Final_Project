@@ -36,6 +36,22 @@ Other important definitions:
 
 - Cycle: a path that starts and ends at the same vertex. All cycles are paths, but not all paths are cycles.
 
+- Edge Weight: this is a characteristic of the edges, normally described with numbers, that classifies the edges on how efficient they are. The efficiency weight can be define the money spent, power consumed, time wasted, or etc. 
+
+A requirement of this program is also to have a function that uses a minimum spanning tree (MST) algorithm. Before designing the program it is important to understand what a MST is.
+
+According to Layman's definition, an MST is a redefinition of a graph with all its vertices but one edge less, being that it has the minimum possible weight among the edges, in other words, the heaviest edge is removed. MSTs are important in order to create a more efficient program. Here is an MST visual example:
+
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/e5a8a28a-e1b1-4e1c-9793-57adc257bdd1)
+
+Figure 2
+
+
+
+
+Now for the actual desing of my program, I will have:
+
+
 ---------------------------------------------------------------------------------------------------
 
 Tests: (at least 2 per function)
