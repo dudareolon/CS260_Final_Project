@@ -81,6 +81,7 @@ int main() {
     // can't just input a constant/string because my function only accepts Vertex inputs for the source and destination
     graph.addEdge(graph.vertices[0], graph.vertices[1], 5);
     graph.addEdge(graph.vertices[1], graph.vertices[2], 3);
+    graph.addEdge(graph.vertices[1], graph.vertices[2], 3);
 
 
     return 0;
