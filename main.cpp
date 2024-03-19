@@ -11,7 +11,7 @@ using std::vector;
 struct Vertex {
     // each vertex will store a name and a vector that contains the address of their neighboring vertices
     string name;
-    vector<Vertex*> neighbors;
+    vector<Vertex> neighbors;
     
 };
 
@@ -52,11 +52,11 @@ public:
         newEdge.destination = &destination; // & takes the address of the variable after it
         newEdge.source = &source; // assign the address to the destination and source pointers
 
+        // Insert the new edge at the end of the edges storage vector
+        edges.insert(edges.end(), newEdge);
 
-    }
-
-
-
+        // need to add the destination vertex as one of the neighbors of the source vertex
+        source.neighbors.insert(source.neighbors.end(), destination);
 };
 
 int main() {
