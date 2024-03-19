@@ -46,10 +46,14 @@ According to Layman's definition, an MST is a redefinition of a graph with all i
 
 Figure 2
 
+The properties of a Spanning Tree are:
+ - There are the same number of vertices in the graph and in the spanning tree
+ - There are an amount of vertices-1 edges
+ - The tree should be connected
+ - The spanning tree should be acyclic, which means you should not be able to find a cycle in the tree
 
 
-
-Now for the actual desing of my program, I will have:
+Now for the actual design of my program, I will have:
 
 
 ---------------------------------------------------------------------------------------------------
