@@ -1,9 +1,10 @@
 // CS260 - Final Project - Graph - Eduarda (Duda) Reolon
 // Description: implement a graph class with at least:
 // - a function to add a new vertex to the graph;
-// a function to add a new edge between two vertices of the graph;
-// a function for a shortest path algorithm;
-// a function for a minimum spanning tree algorithm.
+// - a function to add a new edge between two vertices of the graph;
+// - a function for a shortest path algorithm;
+// - a function for a minimum spanning tree algorithm.
+// to be able to get the last function working I had to use a lot of ChatGPTs help
 
 // include files that are used during code
 #include <iostream>
@@ -270,43 +271,108 @@ public:
 int main() {
     Graph graph;
 
-    // Add vertices
-    graph.addVertex("A");
+    // TESTING SECTION - for addVertex
+    // TEST 1
+    // Verify if several components can be added to the graph
     graph.addVertex("A");
     graph.addVertex("B");
     graph.addVertex("C");
     graph.addVertex("D");
     graph.addVertex("E");
+    // ran smoothly with no error messages
 
-    // Adding edges
+    // TEST 2
+    // Verify if several components can be added to the graph
+    graph.addVertex("A");
+    // correctly displayed the error message
+
+
+    // TESTING SECTION - for addEdge
+    // TEST 1
+    // Try to add several edges
     // can't just input a constant/string because my function only accepts Vertex inputs for the source and destination
-    graph.addEdge(&graph.vertices[0], &graph.vertices[1], 5);
-    graph.addEdge(&graph.vertices[0], &graph.vertices[2], 3);
-    graph.addEdge(&graph.vertices[1], &graph.vertices[2], 2);
-    graph.addEdge(&graph.vertices[1], &graph.vertices[2], 2);
-    graph.addEdge(&graph.vertices[1], &graph.vertices[3], 4);
-    graph.addEdge(&graph.vertices[2], &graph.vertices[3], 7);
-    graph.addEdge(&graph.vertices[2], &graph.vertices[4], 6);
-    graph.addEdge(&graph.vertices[3], &graph.vertices[4], 1);
+    graph.addEdge(&graph.vertices[0], &graph.vertices[1], 5); // (A,B,5)
+    graph.addEdge(&graph.vertices[0], &graph.vertices[2], 3); // (A,C,3)
+    graph.addEdge(&graph.vertices[1], &graph.vertices[2], 2); // (B,C,2)
+    graph.addEdge(&graph.vertices[1], &graph.vertices[3], 4); // (B,D,4)
+    graph.addEdge(&graph.vertices[2], &graph.vertices[3], 7); // (C,D,7)
+    graph.addEdge(&graph.vertices[2], &graph.vertices[4], 6); // (C,E,6)
+    graph.addEdge(&graph.vertices[3], &graph.vertices[4], 1); // (D,E,1)
+    // ran smoothly with no error messages
 
-    // Finding shortest path
+    // TEST 2
+    // add an edge for a vertex that does not exist
+    // graph.addEdge(graph.vertices[1], graph.vertices[22], 3); 
+    // it gives bad_alloc error and stops the program
+
+
+    // TESTING SECTION - for shortest_path
+    // TEST 1
+    // Check if it successfully finds the shortest path between two vertices
     cout << "Shortest Path from A to E: ";
     vector<string> shortest_path = graph.shortest_path("A", "E");
     for (const auto& vertex : shortest_path) {
         cout << vertex << " ";
     }
     cout << endl;
+    // Displayed correct message "Shortest Path from A to E: A C E "
 
-    // test to add an edge for a vertex that does not exist
-    // graph.addEdge(graph.vertices[1], graph.vertices[22], 3); // it gives bad_alloc error 
+    // TEST 2 
+    // Check what it does when two paths between the vertices are the same length
+    // create another 2 edges path fro A to E
+    graph.addVertex("F");    
+    graph.addEdge(&graph.vertices[0], &graph.vertices[5], 1); // (A,F,1)
+    graph.addEdge(&graph.vertices[5], &graph.vertices[4], 1); // (F,E,1)
+    // call function again
+    cout << "Shortest Path from A to E: ";
+    vector<string> shortest_path1 = graph.shortest_path("A", "E");
+    for (const auto& vertex : shortest_path1) {
+        cout << vertex << " ";
+    }
+    cout << endl;
+    // Displayed correct message "Shortest Path from A to E: A F E "
 
-    // Finding minimum spanning tree using Kruskal's algorithm
+
+    // Same test with other variables
+    // A to D can be achieved by going through the path A B D or A C D in our graph
+    cout << "Shortest Path from A to D: ";
+    vector<string> shortest_path2 = graph.shortest_path("A", "D");
+    for (const auto& vertex : shortest_path2) {
+        cout << vertex << " ";
+    }
+    cout << endl;
+    // Displayed correct message "Shortest Path from A to D: A C D "
+
+    // From the results we can say that when there are two paths of the same length from one vertex to the other, my program displays the path that has less weight 
+
+
+    // TESTING SECTION - for MST
+    // TEST 1
+    // check if it successfully finds the MST of a graph
     cout << "Minimum Spanning Tree: ";
     vector<pair<string, string>> min_span_tree = graph.kruskal_min_span_tree();
     for (const auto& edge : min_span_tree) {
         cout << "(" << edge.first << ", " << edge.second << ") ";
     }
     cout << endl;
+
+    // TEST 2
+    // check what it does when there are two or more edges of the same weight and one of them needs to be removed 
+    // create a new graph
+    Graph graph2;
+    graph2.addVertex("A"); 
+    graph2.addVertex("B"); 
+    graph2.addVertex("C");    
+    graph2.addEdge(&graph2.vertices[0], &graph2.vertices[1], 1); // (A,B,2)
+    graph2.addEdge(&graph2.vertices[1], &graph2.vertices[2], 5); // (B,C,2)   
+    graph2.addEdge(&graph2.vertices[0], &graph2.vertices[2], 5); // (A,C,2)
+    cout << "Minimum Spanning Tree: ";
+    vector<pair<string, string>> min_span_tree2 = graph2.kruskal_min_span_tree();
+    for (const auto& edge : min_span_tree2) {
+        cout << "(" << edge.first << ", " << edge.second << ") ";
+    }
+    cout << endl;
+    // it chooses to keep the edges that included the first added vertex (A)
 
     return 0;
 }
