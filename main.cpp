@@ -23,12 +23,37 @@ struct Edge {
     int weight;
 };
 
+// Class that will define what the Graph class and its functions are
 class Graph{
+private:
+    // I will be storing all the vertices and the edges in the graph on two vectors
+    vector<Vertex> vertices; // On later functions when I want to analyze the graph I will be able to iterate through the vectors
+    vector<Edge> edges;      
+
+public:
+
+    // This function adds a vertex to the graph, but does not connect it yet
+    void addVertex(string name) {
+        
+        // Create a new Vertex object
+        Vertex newVertex;
+        newVertex.name = name;
+
+        // Insert the new vertex at the end of the vertices storage vector
+        vertices.insert(vertices.end(), newVertex);
+    }
+
+
 
 };
 
 int main() {
     Graph graph;
+
+    // Add vertices
+    graph.addVertex("A");
+    graph.addVertex("B");
+    graph.addVertex("C");
 
     return 0;
 }
