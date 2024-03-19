@@ -63,6 +63,27 @@ Figure 3
 
 Tests: (at least 2 per function)
 
+In order to be able to run these tests I will need to code another function that will display the graph so I can verify the status of my graph after each operation 
+Before I start coding, I konw I my program will have to pass the following tests:
+
+for add_vertex
+- Verify if several components can be added to the graph
+- Try to add a component that is already in the graph
+
+for add_edge
+- Try to add several edges
+- Try to use a source node that is not in the graph
+- Try to use a destination node that is not in the graph
+
+for shortest_path
+- Check if it successfuly finds the shortest path between two vertices
+- Check what it does when two paths between the vertices are the same length 
+
+for MST
+- check if it successfuly finds the MST of a graph
+- check what it does when there are two edges of the highest weight
+
+
 ---------------------------------------------------------------------------------------------------
 
 Complexity Analyzis:
