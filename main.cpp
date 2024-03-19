@@ -185,6 +185,7 @@ public:
         return reversed_path;
     }
 
+    // Helper function to find the parent of a function
     string find_parent(unordered_map<string, string>& parent, const string& vertex) {
         if (parent[vertex] != vertex) {
             parent[vertex] = find_parent(parent, parent[vertex]);
@@ -219,7 +220,7 @@ public:
         //  1- Sort all the edges in non-decreasing order of their weight. 
         
         //declare a vector to store edges with integer weights and pairs of strings representing source and destination vertices.
-        vector<pair<int, pair<string, string>>> edges;
+        vector<pair<int, pair<string, string>>> edges; // edge = (weight, {source, destination})
 
         for (auto& vertex_pair : neighbors_list) { // for each vertex pair in the neighbor_list unsorted map
 
@@ -237,7 +238,27 @@ public:
 
         // 2- Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If the cycle is not formed, include this edge. Else, discard it. 
         // 3- Repeat step#2 until there are (V-1) edges in the spanning tree.
-      
+        
+        for (auto& edge : edges) { // Iterate through each edge in the sorted list of edges
+
+            // Set the source and destination vertices from the edge to their respective variable
+            const string& source = edge.second.first;
+            const string& destination = edge.second.second;
+            // do the same with the weight 
+            int weight = edge.first;
+
+            // Find the parent of the source and destination vertices
+            string parent_source = find_parent(parent, source);
+            string parent_destination = find_parent(parent, destination);
+
+            // Check if adding this edge forms a cycle in the minimum spanning tree
+            if (parent_source != parent_destination) {
+                // If no cycle is formed, add the edge to the minimum spanning tree
+                min_span_tree_edges.push_back({source, destination});
+                // Union the sets of source and destination vertices by updating their parents
+                parent[parent_destination] = parent_source;
+            }
+        }
 
         // returns the result
         return min_span_tree_edges;
