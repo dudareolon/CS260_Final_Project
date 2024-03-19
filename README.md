@@ -73,6 +73,7 @@ for add_vertex
 for add_edge
 - Try to add several edges
 - repeat adding the same edge
+- add an edge for a vertex that does not exist
 
 for shortest_path
 - Check if it successfuly finds the shortest path between two vertices
