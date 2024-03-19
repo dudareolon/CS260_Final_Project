@@ -25,12 +25,10 @@ struct Edge {
 
 // Class that will define what the Graph class and its functions are
 class Graph{
-private:
+public:
     // I will be storing all the vertices and the edges in the graph on two vectors
     vector<Vertex> vertices; // On later functions when I want to analyze the graph I will be able to iterate through the vectors
     vector<Edge> edges;      
-
-public:
 
     // This function adds a vertex to the graph, but does not connect it yet
     void addVertex(string name) {
@@ -57,6 +55,7 @@ public:
 
         // need to add the destination vertex as one of the neighbors of the source vertex
         source.neighbors.insert(source.neighbors.end(), destination);
+    }
 };
 
 int main() {
@@ -66,6 +65,13 @@ int main() {
     graph.addVertex("A");
     graph.addVertex("B");
     graph.addVertex("C");
+
+
+    // Adding edges
+    // can't just input a constant/string because my function only accepts Vertex inputs for the source and destination
+    graph.addEdge(graph.vertices[0], graph.vertices[1], 5);
+    graph.addEdge(graph.vertices[1], graph.vertices[2], 3);
+
 
     return 0;
 }
