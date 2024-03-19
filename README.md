@@ -55,6 +55,9 @@ The properties of a Spanning Tree are:
 
 Now for the actual design of my program, I will have:
 
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/4b9ed2e3-b59a-4064-8d1b-6e0f50658142)
+
+Figure 3
 
 ---------------------------------------------------------------------------------------------------
 
