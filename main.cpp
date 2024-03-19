@@ -193,6 +193,11 @@ public:
     }
 
     // This function attempts to apply the Kruskal's algorithm to find the minimum spanning tree
+    // Kruskal's algorithm follows these steps:
+    // 1- Sort all the edges in non-decreasing order of their weight. 
+    // 2- Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If the cycle is not formed, include this edge. Else, discard it. 
+    // 3- Repeat step#2 until there are (V-1) edges in the spanning tree.
+    //
     // it takes no input but it will output a vector that each element is a pair of two strings
     // these two strings will represent a pair of connected vertices that are still present in the MST 
     vector<pair<string, string>> kruskal_min_span_tree() {
@@ -200,6 +205,24 @@ public:
         // Initialize minimum spanning tree edges
         vector<pair<string, string>> min_span_tree_edges;
 
+        // The same way as we did on the shortest_path function, we need to find a way to store the parent of the vertices we'll be iterating through
+        unordered_map<string, string> parent;
+
+
+        // In Kruskal's algorithm, we need to keep track of the parent of each vertex. Initially, each vertex is considered as its own parent.
+        for (auto& vertex_pair : neighbors_list) { // for each vertex pair in the neighbor_list unsorted map
+            const string& vertex = vertex_pair.first; // .first extracts the name of the neighbor vertex
+            parent[vertex] = vertex; //set it as its own parent
+        }
+
+
+        //  1- Sort all the edges in non-decreasing order of their weight. 
+
+
+
+        // 2- Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If the cycle is not formed, include this edge. Else, discard it. 
+        // 3- Repeat step#2 until there are (V-1) edges in the spanning tree.
+      
 
         // returns the result
         return min_span_tree_edges;
@@ -226,9 +249,9 @@ int main() {
     graph.addEdge(&graph.vertices[1], &graph.vertices[2], 2);
     graph.addEdge(&graph.vertices[1], &graph.vertices[2], 2);
     graph.addEdge(&graph.vertices[1], &graph.vertices[3], 4);
-    graph.addEdge(&graph.vertices[2], &graph.vertices[3], 1);
+    graph.addEdge(&graph.vertices[2], &graph.vertices[3], 7);
     graph.addEdge(&graph.vertices[2], &graph.vertices[4], 6);
-    graph.addEdge(&graph.vertices[3], &graph.vertices[4], 7);
+    graph.addEdge(&graph.vertices[3], &graph.vertices[4], 1);
 
     // Finding shortest path
     cout << "Shortest Path from A to E: ";
