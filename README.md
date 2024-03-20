@@ -66,23 +66,94 @@ Tests: (at least 2 per function)
 In order to be able to run these tests I will need to code another function that will display the graph so I can verify the status of my graph after each operation 
 Before I start coding, I konw I my program will have to pass the following tests:
 
-for add_vertex
+*for add_vertex*
 - Verify if several components can be added to the graph
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/51699bd8-478e-4850-90f7-6dd34b3cbe61)
+
+  This is the current program status:
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/2354d06f-d59e-4369-8cc8-b4d984b81732)
+
+
 - Try to add a component that is already in the graph
 
-for add_edge
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/af3ab774-d819-4539-814c-496cae9892e0)
+
+  Displayed: "Vertex A is already in the graph"
+
+
+*for add_edge*
 - Try to add several edges
-- repeat adding the same edge
+
+ ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/c9f7d2e1-9b79-4f98-851d-66089d45c69c)
+
+ Now, this is the status of the program:
+ 
+ ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/10cc33ba-2d3e-405c-a6bd-41d67c21f235)
+
+  
 - add an edge for a vertex that does not exist
 
-for shortest_path
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/a59e5949-eb19-44dc-baf1-7d67b35a3f1e)
+
+
+*for shortest_path*
 - Check if it successfuly finds the shortest path between two vertices
+ 
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/67e7d64e-8f33-4e40-8286-2e59f3eb9aab)
+
+ Displayed correct message "Shortest Path from A to E: A C E "
+
+ The shortest path from A to E is highlighted on the picture below:
+
+ ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/c699b03f-556c-48ec-a640-21b969160dc9)
+
+
+
 - Check what it does when two paths between the vertices are the same length 
 
-for MST
-- check if it successfuly finds the MST of a graph
-- check what it does when there are two edges of the highest weight
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/3b3fa35b-8237-477c-a319-1e3c837ce53e)
 
+The shortest path from A to E is highlighted on the picture below:
+
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/339d190a-718a-415c-88e0-cbdd7f0b257f)
+
+ Displayed correct message "Shortest Path from A to E: A F E "
+
+ From what it seems the program chooses the path with less weight if there is a length conflict. But let's test it again to make sure. 
+
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/92331b2b-059e-47f4-a867-452197525606)
+
+ Displayed correct message "Shortest Path from A to D: A C D "
+
+The two possibilities of shortest path from A to D are displayed below:
+
+ ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/1e2252da-32de-42c0-a555-a9eb67407ea7)
+
+ Both the green and the yellow path have a length of 2 edges to get from A to D. The yellow path has a weight of 10, while the green path has a weight of 9. From our previous theory, we thought when two lenghts were the same that the program would choose the path with less weight to display. I am glad I retested this situation, because my previous theory was wrong, the program displayed the path with more weight, the yellow (A C D). 
+
+*for MST*
+- check if it successfuly finds the MST of a graph
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/26c65a2d-3ab6-4444-9b78-d79fab1ced20)
+
+  Displayed correct message "Minimum Spanning Tree: (A, F) (D, E) (E, F) (B, C) (A, C)"
+
+  As we can see from the figure below, the displayed result is correct:
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/ee708c1b-4d43-4b6e-ab41-aff2fbfa4ea7)
+
+  This MST shows the version of the graph where all vertices are still acceptable, in a way that the weight is minimum while not having any cycles on its structure.
+
+  
+- check what it does when there are two or more edges of the same weight and one of them needs to be removed 
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/0191b048-b587-443f-8fc9-e2fc67cfd363)
+
+  Displayed correct message "Minimum Spanning Tree: (A, B) (A, C)"
+  
+  it chooses to keep the edges that included the first added vertex (A)
 
 ---------------------------------------------------------------------------------------------------
 
