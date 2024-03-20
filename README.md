@@ -91,12 +91,38 @@ for add_edge
 
 for shortest_path
 - Check if it successfuly finds the shortest path between two vertices
+ 
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/67e7d64e-8f33-4e40-8286-2e59f3eb9aab)
+
+ Displayed correct message "Shortest Path from A to E: A C E "
+
+
 - Check what it does when two paths between the vertices are the same length 
+
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/3b3fa35b-8237-477c-a319-1e3c837ce53e)
+
+ Displayed correct message "Shortest Path from A to E: A F E "
+
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/92331b2b-059e-47f4-a867-452197525606)
+
+ Displayed correct message "Shortest Path from A to D: A C D "
+
+ From the results we can say that when there are two paths of the same length from one vertex to the other, my program displays the path that has less weight 
 
 for MST
 - check if it successfuly finds the MST of a graph
-- check what it does when there are two edges of the highest weight
 
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/26c65a2d-3ab6-4444-9b78-d79fab1ced20)
+
+  Displayed correct message "Minimum Spanning Tree: (A, F) (D, E) (E, F) (B, C) (A, C)"
+  
+- check what it does when there are two or more edges of the same weight and one of them needs to be removed 
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/0191b048-b587-443f-8fc9-e2fc67cfd363)
+
+  Displayed correct message "Minimum Spanning Tree: (A, B) (A, C)"
+  
+  it chooses to keep the edges that included the first added vertex (A)
 
 ---------------------------------------------------------------------------------------------------
 
