@@ -151,7 +151,10 @@ The two possibilities of shortest path from A to D are displayed below:
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/0191b048-b587-443f-8fc9-e2fc67cfd363)
 
-  Displayed correct message "Minimum Spanning Tree: (A, B) (A, C)"
+  Displayed correct message "Minimum Spanning Tree: (A, B) (A, C)". You can see the visual representation of this program on the picture below:
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/531cf92f-d5ad-48f0-8d6f-445f932e2ebc)
+
   
   it chooses to keep the edges that included the first added vertex (A)
 
