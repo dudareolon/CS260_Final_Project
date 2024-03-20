@@ -93,9 +93,29 @@ Complexity Analyzis:
 The parts of the code where I meet each one of the requirements are the following:
 
 - a function to add a new vertex to the graph:
+  
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/eaed3191-b974-4723-9dcf-8dad4a969334)
+
 
 - a function to add a new edge between two vertices of the graph:
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/9e0a3c75-2c9a-461a-886f-49bc0148eef2)
+
   
 - a function for a shortest path algorithm:
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/153ee4d9-62cf-49fc-bb28-d7e696d2e505)
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/b9ea6cab-c42b-49f5-bd14-5b54d4c6895c)
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/0dbeaaba-7bbd-4ee1-a0c6-61b3030f9431)
+
+
   
 - a function for a minimum spanning tree algorithm:
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/bff79a47-6e50-481a-902a-690cf79f77e1)
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/0687785d-1640-40f1-86a8-ea118632358a)
+
+
