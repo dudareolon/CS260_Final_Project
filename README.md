@@ -115,7 +115,13 @@ Before I start coding, I konw I my program will have to pass the following tests
 
 ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/3b3fa35b-8237-477c-a319-1e3c837ce53e)
 
+The shortest path from A to E is highlighted on the picture below:
+
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/339d190a-718a-415c-88e0-cbdd7f0b257f)
+
  Displayed correct message "Shortest Path from A to E: A F E "
+
+ From what it seems the program chooses the path with less weight if there is a length conflict. But let's test it again to make sure. 
 
 ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/92331b2b-059e-47f4-a867-452197525606)
 
