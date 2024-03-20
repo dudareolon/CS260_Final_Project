@@ -87,6 +87,11 @@ Before I start coding, I konw I my program will have to pass the following tests
 - Try to add several edges
 
  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/c9f7d2e1-9b79-4f98-851d-66089d45c69c)
+
+ Now, this is the status of the program:
+ 
+ ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/10cc33ba-2d3e-405c-a6bd-41d67c21f235)
+
   
 - add an edge for a vertex that does not exist
 
