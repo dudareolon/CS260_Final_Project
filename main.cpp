@@ -95,7 +95,7 @@ public:
         source->neighbors.push_back(destination); // Use -> to access members of pointers
         destination->neighbors.push_back(source); // Use -> to access members of pointers
 
-        // Assuming undirected graph, update adjacency list
+        // Assuming undirected graph, update neighbor list
         neighbors_list[source->name][destination->name] = weight;
         neighbors_list[destination->name][source->name] = weight;
     }
