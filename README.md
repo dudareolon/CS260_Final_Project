@@ -161,6 +161,14 @@ The two possibilities of shortest path from A to D are displayed below:
 
 Complexity Analyzis:
 
+To start the complexity analysis I like to bring back the graph picture that shows all the possibe big O notations of a code. See it below.
+
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/3660b581-de57-4e43-8dc8-b3845370a4df)
+
+This image was retrieved from https://medium.com/@hlfdev/algorithms-discover-the-power-of-big-o-notation-17a367bd62a
+
+
+
 ---------------------------------------------------------------------------------------------------
 
 The parts of the code where I meet each one of the requirements are the following:
