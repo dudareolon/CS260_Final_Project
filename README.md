@@ -233,9 +233,13 @@ For addEdge function:
 For shortest_path:
 - A lot of this code is linear and falls under the O(1) notation, but there are two exceptions to it, which are:
  - The nested loop:
-   while (!destination_found && !level.empty()) { 
+   
+   while (!destination_found && !level.empty()) {
+   
      for (auto& current_level : level) { // first for loop
+   
         for (auto& neighbor : neighbors_list[current_level]) { // second for loop
+   
    The code haas a double nested loop, which is a for loop that is inside a for loop that is inside a while loop. The while loop reapeats itself until its parameters are met. For each iteration of the while loop, the code has to perform all the iterations of the first for loop. On top of that, for each time the first for loop iterates, the second for loop has to run through all its iterations. This double nested loop makes the function no longe a O(1) complex, but a O(V^3), being that V is the amount of vertices in the graph. The best situation possibly imaginable for this code could make it back into a O(1) function, but this scenario would rarely happen. Considering that this ocde is big O(V^3) program, we can consider it bad and not efficient. If I had more time and motivation, I would think on a new approach to the problem so that the code would be less complex and use less computing power. 
 
  - The while loops that are by themselves:
