@@ -206,11 +206,12 @@ For kruskal_min_span_tree:
 - The function begins with a nested for loop that is used to iterate through all the vertices on all of the level, as you can see below:
 
   for (auto& current_level : level) {
-      for (auto& neighbor : neighbors_list[current_level]) {
+
+       for (auto& neighbor : neighbors_list[current_level]) {
   
 - As we have already discussed, double nested loops put the function under the O(V) big O notation being V the amount of vertices.
 
-- For the main loop of the function:
+For the main loop of the function:
 - This function is more complex because it employs a disjoint-set data structure. This structure manages a collection of separate sets, typically represented as trees. Each tree's root symbolizes a set, with every node representing an element in that set. In this code, the disjoint-set data isn't explicitly a tree but is represented using an unordered map. At the outset, the function initializes an unordered map called parent. Here, each vertex starts as its own parent, similar to how elements start in their own sets in disjoint-set trees.
 
 - During the main loop, the find_parent function is called to locate the actual parent of each vertex. This mirrors finding the root of the set containing that vertex in a disjoint-set forest. The algorithm proceeds by considering edges from lowest to highest weight, ensuring they don't create cycles. The unordered map streamlines this process. Instead of nested loops traversing vertices and edges, all information is stored in the same map. As the algorithm progresses, fewer vertices need to be inspected with each union operation, reducing time consumption. This behavior aligns with a logarithmic time complexity, O(log(V)), where V represents the number of vertices in the graph.
