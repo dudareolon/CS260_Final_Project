@@ -61,7 +61,9 @@ Figure 3
 
 The design above was my initial plan of how to do this code, but after doing reasearch on the better ways to implement graphs and after finishing my entire code, this is how the design would realisitcly look like:
 
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/5bef2e33-f1ae-47ac-9040-c619756d098d)
 
+Figure 4
 
 ---------------------------------------------------------------------------------------------------
 
@@ -75,14 +77,20 @@ Before I start coding, I konw I my program will have to pass the following tests
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/51699bd8-478e-4850-90f7-6dd34b3cbe61)
 
+  Figure 5
+
   This is the current program status:
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/2354d06f-d59e-4369-8cc8-b4d984b81732)
+  
+  Figure 6
 
 
 - Try to add a component that is already in the graph
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/af3ab774-d819-4539-814c-496cae9892e0)
+
+  Figure 7
 
   Displayed: "Vertex A is already in the graph"
 
@@ -92,14 +100,20 @@ Before I start coding, I konw I my program will have to pass the following tests
 
  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/c9f7d2e1-9b79-4f98-851d-66089d45c69c)
 
+ Figure 8
+
  Now, this is the status of the program:
  
  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/10cc33ba-2d3e-405c-a6bd-41d67c21f235)
+
+ Figure 9
 
   
 - add an edge for a vertex that does not exist
 
 ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/a59e5949-eb19-44dc-baf1-7d67b35a3f1e)
+
+Figure 10
 
 
 *for shortest_path*
@@ -107,11 +121,15 @@ Before I start coding, I konw I my program will have to pass the following tests
  
 ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/67e7d64e-8f33-4e40-8286-2e59f3eb9aab)
 
+Figure 11
+
  Displayed correct message "Shortest Path from A to E: A C E "
 
  The shortest path from A to E is highlighted on the picture below:
 
  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/c699b03f-556c-48ec-a640-21b969160dc9)
+
+ Figure 12
 
 
 
@@ -119,9 +137,13 @@ Before I start coding, I konw I my program will have to pass the following tests
 
 ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/3b3fa35b-8237-477c-a319-1e3c837ce53e)
 
+Figure 13
+
 The shortest path from A to E is highlighted on the picture below:
 
 ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/339d190a-718a-415c-88e0-cbdd7f0b257f)
+
+Figure 14
 
  Displayed correct message "Shortest Path from A to E: A F E "
 
@@ -129,11 +151,15 @@ The shortest path from A to E is highlighted on the picture below:
 
 ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/92331b2b-059e-47f4-a867-452197525606)
 
+Figure 15
+
  Displayed correct message "Shortest Path from A to D: A C D "
 
 The two possibilities of shortest path from A to D are displayed below:
 
  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/1e2252da-32de-42c0-a555-a9eb67407ea7)
+
+ Figure 16
 
  Both the green and the yellow path have a length of 2 edges to get from A to D. The yellow path has a weight of 10, while the green path has a weight of 9. From our previous theory, we thought when two lenghts were the same that the program would choose the path with less weight to display. I am glad I retested this situation, because my previous theory was wrong, the program displayed the path with more weight, the yellow (A C D). 
 
@@ -142,11 +168,15 @@ The two possibilities of shortest path from A to D are displayed below:
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/26c65a2d-3ab6-4444-9b78-d79fab1ced20)
 
+Figure 17
+
   Displayed correct message "Minimum Spanning Tree: (A, F) (D, E) (E, F) (B, C) (A, C)"
 
   As we can see from the figure below, the displayed result is correct:
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/ee708c1b-4d43-4b6e-ab41-aff2fbfa4ea7)
+
+  Figure 18
 
   This MST shows the version of the graph where all vertices are still acceptable, in a way that the weight is minimum while not having any cycles on its structure.
 
@@ -155,9 +185,13 @@ The two possibilities of shortest path from A to D are displayed below:
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/0191b048-b587-443f-8fc9-e2fc67cfd363)
 
+Figure 19
+
   Displayed correct message "Minimum Spanning Tree: (A, B) (A, C)". You can see the visual representation of this program on the picture below:
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/02bab7e4-e589-4ad1-a235-490074d4dd66)
+
+  Figure 20
   
   it chooses to keep the edges that included the first added vertex (A)
 
@@ -168,6 +202,8 @@ Complexity Analysis:
 To start the complexity analysis I like to bring back the graph picture that shows all the possibe big O notations of a code. See it below.
 
 ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/3660b581-de57-4e43-8dc8-b3845370a4df)
+
+Figure 21
 
 This image was retrieved from https://medium.com/@hlfdev/algorithms-discover-the-power-of-big-o-notation-17a367bd62a
 
@@ -227,19 +263,29 @@ The parts of the code where I meet each one of the requirements are the followin
   
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/eaed3191-b974-4723-9dcf-8dad4a969334)
 
+  Figure 22
+
 
 - a function to add a new edge between two vertices of the graph:
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/9e0a3c75-2c9a-461a-886f-49bc0148eef2)
+
+  Figure 23
 
   
 - a function for a shortest path algorithm:
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/153ee4d9-62cf-49fc-bb28-d7e696d2e505)
 
+  Figure 24
+
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/b9ea6cab-c42b-49f5-bd14-5b54d4c6895c)
 
+  Figure 25
+
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/0dbeaaba-7bbd-4ee1-a0c6-61b3030f9431)
+
+  Figure 26
 
 
   
@@ -247,6 +293,10 @@ The parts of the code where I meet each one of the requirements are the followin
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/bff79a47-6e50-481a-902a-690cf79f77e1)
 
+  Figure 27
+
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/0687785d-1640-40f1-86a8-ea118632358a)
+
+  Figure 28
 
 
