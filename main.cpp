@@ -186,7 +186,7 @@ public:
         return reversed_path;
     }
 
-    // Helper function to find the parent of a function
+    // Helper function to find the parent of a vertex
     string find_parent(unordered_map<string, string>& parent, const string& vertex) {
         if (parent[vertex] != vertex) {
             parent[vertex] = find_parent(parent, parent[vertex]);
@@ -311,7 +311,7 @@ int main() {
     // Check if it successfully finds the shortest path between two vertices
     cout << "Shortest Path from A to E: ";
     vector<string> shortest_path = graph.shortest_path("A", "E");
-    for (const auto& vertex : shortest_path) {
+    for (auto& vertex : shortest_path) {
         cout << vertex << " ";
     }
     cout << endl;
@@ -326,7 +326,7 @@ int main() {
     // call function again
     cout << "Shortest Path from A to E: ";
     vector<string> shortest_path1 = graph.shortest_path("A", "E");
-    for (const auto& vertex : shortest_path1) {
+    for (auto& vertex : shortest_path1) {
         cout << vertex << " ";
     }
     cout << endl;
@@ -337,7 +337,7 @@ int main() {
     // A to D can be achieved by going through the path A B D or A C D in our graph
     cout << "Shortest Path from A to D: ";
     vector<string> shortest_path2 = graph.shortest_path("A", "D");
-    for (const auto& vertex : shortest_path2) {
+    for (auto& vertex : shortest_path2) {
         cout << vertex << " ";
     }
     cout << endl;
@@ -351,7 +351,7 @@ int main() {
     // check if it successfully finds the MST of a graph
     cout << "Minimum Spanning Tree: ";
     vector<pair<string, string>> min_span_tree = graph.kruskal_min_span_tree();
-    for (const auto& edge : min_span_tree) {
+    for (auto& edge : min_span_tree) {
         cout << "(" << edge.first << ", " << edge.second << ") ";
     }
     cout << endl;
@@ -368,7 +368,7 @@ int main() {
     graph2.addEdge(&graph2.vertices[0], &graph2.vertices[2], 5); // (A,C,2)
     cout << "Minimum Spanning Tree: ";
     vector<pair<string, string>> min_span_tree2 = graph2.kruskal_min_span_tree();
-    for (const auto& edge : min_span_tree2) {
+    for (auto& edge : min_span_tree2) {
         cout << "(" << edge.first << ", " << edge.second << ") ";
     }
     cout << endl;
