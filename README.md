@@ -167,6 +167,26 @@ To start the complexity analysis I like to bring back the graph picture that sho
 
 This image was retrieved from https://medium.com/@hlfdev/algorithms-discover-the-power-of-big-o-notation-17a367bd62a
 
+I also like to separate my code into each one of its functions and analyze the complexity of each function individually.
+
+For addVertex function:
+- It starts with a loop that iterates through each element in the vertice vector. In the best case scenario, there is only one vertex in the vector which would make it fall under the O(1) notation. However, most of the times there will be more than one vertex, and this loop will make the function be under the O(n) notation, being that n represents the amount of vertices that are in the vertices vector.
+- The iteration in this function doesn't add the new vertex, it only checks if there is already a vertex like that in the graph. The actual lines of adding the new vertex are:
+        // Create a new Vertex object
+        Vertex newVertex;
+        newVertex.name = name;
+
+        // Insert the new vertex at the end of the vertices storage vector
+        vertices.insert(vertices.end(), newVertex);
+
+        neighbors_list[name] = {}; // add a slot in the neighbors_list for the new vertex
+  - These lines don't have any iteration and the program is able to follow them line by line without having to do any repetation, so these lines fall under the O(1) notation.
+  - Without the input check part of the function, the addVertex funciton efficiency would be considered good as it would be a O(1) function. However, I believe it is important to have the input check present which also makes the function more complex.
+ 
+
+  For addEdge function:
+  
+
 
 
 ---------------------------------------------------------------------------------------------------
