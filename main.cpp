@@ -363,9 +363,9 @@ int main() {
     graph2.addVertex("A"); 
     graph2.addVertex("B"); 
     graph2.addVertex("C");    
-    graph2.addEdge(&graph2.vertices[0], &graph2.vertices[1], 1); // (A,B,2)
-    graph2.addEdge(&graph2.vertices[1], &graph2.vertices[2], 5); // (B,C,2)   
-    graph2.addEdge(&graph2.vertices[0], &graph2.vertices[2], 5); // (A,C,2)
+    graph2.addEdge(&graph2.vertices[0], &graph2.vertices[1], 1); // (A,B,1)
+    graph2.addEdge(&graph2.vertices[1], &graph2.vertices[2], 5); // (B,C,5)   
+    graph2.addEdge(&graph2.vertices[0], &graph2.vertices[2], 5); // (A,C,5)
     cout << "Minimum Spanning Tree: ";
     vector<pair<string, string>> min_span_tree2 = graph2.kruskal_min_span_tree();
     for (auto& edge : min_span_tree2) {
