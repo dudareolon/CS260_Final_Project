@@ -180,11 +180,13 @@ For addVertex function:
         vertices.insert(vertices.end(), newVertex);
 
         neighbors_list[name] = {}; // add a slot in the neighbors_list for the new vertex
-  - These lines don't have any iteration and the program is able to follow them line by line without having to do any repetation, so these lines fall under the O(1) notation.
-  - Without the input check part of the function, the addVertex funciton efficiency would be considered good as it would be a O(1) function. However, I believe it is important to have the input check present which also makes the function more complex.
+
+  
+- These lines don't have any iteration and the program is able to follow them line by line without having to do any repetation, so these lines fall under the O(1) notation.
+- Without the input check part of the function, the addVertex funciton efficiency would be considered good as it would be a O(1) function. However, I believe it is important to have the input check present which also makes the function more complex.
  
 
-  For addEdge function:
+For addEdge function:
   
 
 
