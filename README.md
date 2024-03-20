@@ -187,7 +187,23 @@ For addVertex function:
  
 
 For addEdge function:
-  
+- This function is not much complex at all. It goes through every and each line of the function sequentialy and only once. Each line uses one of the computer's clock cycle. So the addEdge function the overall time complexity falls under the O(1) notation, which is considered to be good efficiency.
+
+
+For shortest_path:
+- A lot of this code is linear and falls under the O(1) notation, but there are two exceptions to it, which are:
+ - The nested loop:
+   while (!destination_found && !level.empty()) { 
+     for (auto& current_level : level) { // first for loop
+        for (auto& neighbor : neighbors_list[current_level]) { // second for loop
+   The code haas a double nested loop, which is a for loop that is inside a for loop that is inside a while loop. The while loop reapeats itself until its parameters are met. For each iteration of the while loop, the code has to perform all the iterations of the first for loop. On top of that, for each time the first for loop iterates, the second for loop has to run through all its iterations. This double nested loop makes the function no longe a O(1) complex, but a O(V^3), being that V is the amount of vertices in the graph. The best situation possibly imaginable for this code could make it back into a O(1) function, but this scenario would rarely happen.
+
+ - The while loops that are by themselves:
+    They are not as complex as the double nested loop, their big O notation would fall into the O(V) complexity. However, since the double nested loop is much more complex, it would be what defines the function.  
+
+
+For kruskal_min_span_tree:
+
 
 
 
