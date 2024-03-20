@@ -66,7 +66,7 @@ Tests: (at least 2 per function)
 In order to be able to run these tests I will need to code another function that will display the graph so I can verify the status of my graph after each operation 
 Before I start coding, I konw I my program will have to pass the following tests:
 
-for add_vertex
+*for add_vertex*
 - Verify if several components can be added to the graph
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/51699bd8-478e-4850-90f7-6dd34b3cbe61)
@@ -79,7 +79,7 @@ for add_vertex
   Displayed: "Vertex A is already in the graph"
 
 
-for add_edge
+*for add_edge*
 - Try to add several edges
 
  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/c9f7d2e1-9b79-4f98-851d-66089d45c69c)
@@ -89,7 +89,7 @@ for add_edge
 ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/a59e5949-eb19-44dc-baf1-7d67b35a3f1e)
 
 
-for shortest_path
+*for shortest_path*
 - Check if it successfuly finds the shortest path between two vertices
  
 ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/67e7d64e-8f33-4e40-8286-2e59f3eb9aab)
@@ -109,7 +109,7 @@ for shortest_path
 
  From the results we can say that when there are two paths of the same length from one vertex to the other, my program displays the path that has less weight 
 
-for MST
+*for MST*
 - check if it successfuly finds the MST of a graph
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/26c65a2d-3ab6-4444-9b78-d79fab1ced20)
