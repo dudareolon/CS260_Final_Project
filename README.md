@@ -139,6 +139,13 @@ The two possibilities of shortest path from A to D are displayed below:
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/26c65a2d-3ab6-4444-9b78-d79fab1ced20)
 
   Displayed correct message "Minimum Spanning Tree: (A, F) (D, E) (E, F) (B, C) (A, C)"
+
+  As we can see from the figure below, the displayed result is correct:
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/ee708c1b-4d43-4b6e-ab41-aff2fbfa4ea7)
+
+  This MST shows the version of the graph where all vertices are still acceptable, in a way that the weight is minimum while not having any cycles on its structure.
+
   
 - check what it does when there are two or more edges of the same weight and one of them needs to be removed 
 
