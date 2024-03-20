@@ -71,6 +71,10 @@ Before I start coding, I konw I my program will have to pass the following tests
 
   ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/51699bd8-478e-4850-90f7-6dd34b3cbe61)
 
+  This is the current program status:
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/2354d06f-d59e-4369-8cc8-b4d984b81732)
+
 
 - Try to add a component that is already in the graph
 
