@@ -68,12 +68,26 @@ Before I start coding, I konw I my program will have to pass the following tests
 
 for add_vertex
 - Verify if several components can be added to the graph
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/51699bd8-478e-4850-90f7-6dd34b3cbe61)
+
+
 - Try to add a component that is already in the graph
+
+  ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/af3ab774-d819-4539-814c-496cae9892e0)
+
+  Displayed: "Vertex A is already in the graph"
+
 
 for add_edge
 - Try to add several edges
-- repeat adding the same edge
+
+ ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/c9f7d2e1-9b79-4f98-851d-66089d45c69c)
+  
 - add an edge for a vertex that does not exist
+
+![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/a59e5949-eb19-44dc-baf1-7d67b35a3f1e)
+
 
 for shortest_path
 - Check if it successfuly finds the shortest path between two vertices
