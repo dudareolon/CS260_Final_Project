@@ -59,6 +59,10 @@ Now for the actual design of my program, I will have:
 
 Figure 3
 
+The design above was my initial plan of how to do this code, but after doing reasearch on the better ways to implement graphs and after finishing my entire code, this is how the design would realisitcly look like:
+
+
+
 ---------------------------------------------------------------------------------------------------
 
 Tests: (at least 2 per function)
