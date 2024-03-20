@@ -105,6 +105,11 @@ Before I start coding, I konw I my program will have to pass the following tests
 
  Displayed correct message "Shortest Path from A to E: A C E "
 
+ The shortest path from A to E is highlighted on the picture below:
+
+ ![image](https://github.com/dudareolon/CS260_Final_Project/assets/102680672/c699b03f-556c-48ec-a640-21b969160dc9)
+
+
 
 - Check what it does when two paths between the vertices are the same length 
 
