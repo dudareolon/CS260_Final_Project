@@ -205,9 +205,8 @@ For shortest_path:
 For kruskal_min_span_tree:
 - The function begins with a nested for loop that is used to iterate through all the vertices on all of the level, as you can see below:
 
-  for (auto& current_level : level) {
-
-       for (auto& neighbor : neighbors_list[current_level]) {
+       for (auto& current_level : level) {
+          for (auto& neighbor : neighbors_list[current_level]) {
   
 - As we have already discussed, double nested loops put the function under the O(V) big O notation being V the amount of vertices.
 
