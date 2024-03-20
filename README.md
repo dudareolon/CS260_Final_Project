@@ -133,9 +133,6 @@ The two possibilities of shortest path from A to D are displayed below:
 
  Both the green and the yellow path have a length of 2 edges to get from A to D. The yellow path has a weight of 10, while the green path has a weight of 9. From our previous theory, we thought when two lenghts were the same that the program would choose the path with less weight to display. I am glad I retested this situation, because my previous theory was wrong, the program displayed the path with more weight, the yellow (A C D). 
 
-
- From the results we can say that when there are two paths of the same length from one vertex to the other, my program displays the path that has less weight 
-
 *for MST*
 - check if it successfuly finds the MST of a graph
 
