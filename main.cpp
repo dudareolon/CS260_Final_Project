@@ -85,14 +85,14 @@ public:
         Edge newEdge;
         newEdge.weight = weight;
         newEdge.destination = destination; // No need for & since destination and source are already pointers
-        newEdge.source = source; // No need for & since destination and source are already pointers
+        newEdge.source = source; 
 
         // Insert the new edge at the end of the edges storage vector
         edges.push_back(newEdge);
 
         // Need to add the destination vertex as one of the neighbors of the source vertex
         source->neighbors.push_back(destination); // Use -> to access members of pointers
-        destination->neighbors.push_back(source); // Use -> to access members of pointers
+        destination->neighbors.push_back(source); 
 
         // Assuming undirected graph, update neighbor list
         neighbors_list[source->name][destination->name] = weight;
